@@ -7,4 +7,8 @@ public class FirstClass {
     FirstClass(String str){
         this.str = str;
     }
+
+    void showStr(){
+        System.out.println(this.str);
+    }
 }
