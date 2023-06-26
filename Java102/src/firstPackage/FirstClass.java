@@ -2,7 +2,7 @@ package firstPackage;
 
 public class FirstClass {
 
-    String str;
+    private String str;
 
     FirstClass(String str){
         this.str = str;
