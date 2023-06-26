@@ -18,6 +18,7 @@
  - **SQL Ödev 05 | ORDER BY | LIMIT | OFFSET - <a href="#sql-ödev-05--order-by--limit--offset">Tıklayın</a>**
  - **SQL Ödev 06 | Aggregation Functions - <a href="#sql-ödev-06--aggregation-functions">Tıklayın</a>**
  - **SQL Ödev 07 | GROUP BY | HAVING - <a href="#sql-ödev-07--group-by--having">Tıklayın</a>**
+    - **SQL Ödev 08 | CREATE TABLE | UPDATE DATAS - <a href="#sql-ödev-08--create-table--update-datas">Tıklayın</a>**
 
 <br>
 
