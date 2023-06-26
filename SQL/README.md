@@ -11,17 +11,18 @@
 
 <br>
 
- - **SQL Ödev 01 | WHERE and Comparison & Logical Operations - <a href="#sql-ödev-01--where-ve-karşılaştırma--mantıksal-operatörler">Tıklayın. </a>**
- - **SQL Ödev 02 | BETWEEN ve IN - <a href="#sql-ödev-02--between-ve-in">Tıklayın</a>**
- - **SQL Ödev 03 | LIKE and ILIKE Operators - <a href="#sql-ödev-03--like-and-ilike-operators">Tıklayın</a>**
- - **SQL Ödev 04 | Aggregation Functions - <a href="#sql-ödev-04--distinct-and-count">Tıklayın</a>**
- - **SQL Ödev 05 | ORDER BY | LIMIT | OFFSET - <a href="#sql-ödev-05--order-by--limit--offset">Tıklayın</a>**
- - **SQL Ödev 06 | Aggregation Functions - <a href="#sql-ödev-06--aggregation-functions">Tıklayın</a>**
- - **SQL Ödev 07 | GROUP BY | HAVING - <a href="#sql-ödev-07--group-by--having">Tıklayın</a>**
- - **SQL Ödev 08 | CREATE TABLE | UPDATE DATAS - <a href="#sql-ödev-08--create-table--update-datas">Tıklayın</a>**
- - **SQL Ödev 09 | INNER JOIN - <a href="#sql-ödev-09--inner-join">Tıklayın</a>**
- - **SQL Ödev 10 | LEFT JOIN | RIGHT JOIN | FULL JOIN - <a href="#sql-ödev-10--left-join--right-join--full-join">Tıklayın</a>**
- - **SQL Ödev 11 | UNION | INTERSECT | EXCEPT - <a href="#sql-ödev-11--union--intersect--except">Tıklayın</a>**    
+ - **SQL Ödev 01 | WHERE and Comparison & Logical Operations - <a href="#sql-ödev-01--where-ve-karşılaştırma--mantıksal-operatörler">Click Here. </a>**
+ - **SQL Ödev 02 | BETWEEN ve IN - <a href="#sql-ödev-02--between-ve-in">Click Here</a>**
+ - **SQL Ödev 03 | LIKE and ILIKE Operators - <a href="#sql-ödev-03--like-and-ilike-operators">Click Here</a>**
+ - **SQL Ödev 04 | Aggregation Functions - <a href="#sql-ödev-04--distinct-and-count">Click Here</a>**
+ - **SQL Ödev 05 | ORDER BY | LIMIT | OFFSET - <a href="#sql-ödev-05--order-by--limit--offset">Click Here</a>**
+ - **SQL Ödev 06 | Aggregation Functions - <a href="#sql-ödev-06--aggregation-functions">Click Here</a>**
+ - **SQL Ödev 07 | GROUP BY | HAVING - <a href="#sql-ödev-07--group-by--having">Click Here</a>**
+ - **SQL Ödev 08 | CREATE TABLE | UPDATE DATAS - <a href="#sql-ödev-08--create-table--update-datas">Click Here</a>**
+ - **SQL Ödev 09 | INNER JOIN - <a href="#sql-ödev-09--inner-join">Click Here</a>**
+ - **SQL Ödev 10 | LEFT JOIN | RIGHT JOIN | FULL JOIN - <a href="#sql-ödev-10--left-join--right-join--full-join">Click Here</a>**
+ - **SQL Ödev 11 | UNION | INTERSECT | EXCEPT - <a href="#sql-ödev-11--union--intersect--except">Click Here</a>**
+ - **SQL Ödev 12 | Query Scenarios - <a href="#sql-ödev-12--query-scenarios">Click Here</a>**    
 
 <br>
 
@@ -605,4 +606,46 @@ EXCEPT ALL
 
 <br>
 
+## SQL Ödev 12 | Query Scenarios
 
+<br>
+
+> **1.** film tablosunda film uzunlugu **(length)** sutununda gosterilmektedir. Uzunlugu ortalama film uzunlugundan **(length)** fazla olan kac film vardir?
+
+```sql
+SELECT COUNT(*) FROM film
+WHERE length > (SELECT AVG(length) FROM film);
+```
+
+<br>
+
+> **2.** film tablosunda en yuksek rental_rate degerine sahip kac tane film vardir?
+
+```sql
+SELECT COUNT(*) FROM film
+WHERE rental_rate = (SELECT MAX(rental_rate) FROM film);
+```
+
+<br>
+
+
+> **3.** film tablosunda en yuksek rental_rate ve en dusuk replacement_cost degerine sahip filmleri sorgulayiniz.
+
+```sql
+SELECT * FROM film
+WHERE rental_rate = (SELECT MAX(rental_rate) FROM film)
+AND replacement_cost = (SELECT MIN(replacement_cost) FROM film);
+```
+
+<br>
+
+> **4.** payment tablosunda en fazla sayida odeme yapan musteri kimdir?
+
+```sql
+SELECT customer_id, COUNT(*) as transaction_count FROM payment
+GROUP BY customer_id
+ORDER BY transaction_count DESC
+LIMIT 1;
+```
+
+<br>
