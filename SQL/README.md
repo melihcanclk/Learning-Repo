@@ -1,10 +1,4 @@
 <br>
-<br>
-
-
- ![Image](https://r.resimlink.com/QvqbJzUg.png)
-
-<br>
 
 > #### Bu repo'da [Patika](https://academy.patika.dev/) [SQL Egitimi](https://academy.patika.dev/tr/courses/sql)nde yapmış oldugum bütün ödevler bulunmaktadır.
 
