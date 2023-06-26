@@ -17,6 +17,7 @@
  - **SQL Ödev 04 | Aggregation Functions - <a href="#sql-ödev-04--distinct-and-count">Tıklayın</a>**
  - **SQL Ödev 05 | ORDER BY | LIMIT | OFFSET - <a href="#sql-ödev-05--order-by--limit--offset">Tıklayın</a>**
  - **SQL Ödev 06 | Aggregation Functions - <a href="#sql-ödev-06--aggregation-functions">Tıklayın</a>**
+ - **SQL Ödev 07 | GROUP BY | HAVING - <a href="#sql-ödev-07--group-by--having">Tıklayın</a>**
 
 <br>
 
@@ -262,6 +263,52 @@ WHERE length > 150;
 ```
 
 <br>
+
+
+## SQL Ödev 07 | GROUP BY | HAVING
+
+<br>
+
+> **1.** film tablosunda bulunan filmleri **rating** değerlerine göre gruplayınız.
+
+```sql
+SELECT rating FROM film
+GROUP BY rating;
+```
+
+<br>
+
+> **2.** film tablosunda bulunan filmleri **replacement_cost** sütununa göre grupladığımızda film sayısı **(COUNT)** 50 den fazla olan **replacement_cost** değerini ve karşılık gelen film sayısını sıralayınız. (Bu kisimda HAVING ile WHERE arasindaki farka dikkat ediniz, WHERE'de daha önce belirlediğimiz kosullara göre sorgulama yaparken HAVING'de GROUP BY ile belirlediğimiz kosullara göre sorgulama yaparız.)
+
+```sql
+SELECT replacement_cost, COUNT(*) FROM film
+GROUP BY replacement_cost
+HAVING COUNT(*) > 50;
+```
+
+<br>
+
+> **3.** customer tablosunda bulunan **store_id** değerlerine karşılık gelen müşteri sayılarını nelerdir?
+
+```sql
+SELECT store_id, COUNT(*) FROM customer
+GROUP BY store_id;
+```
+
+<br>
+
+> **4.** city tablosunda bulunan şehir verilerini **country_id** sütununa göre gruplandırdıktan sonra en fazla şehir sayısı barındıran **country_id** bilgisini ve şehir sayısını paylaşınız.
+
+```sql
+SELECT country_id, COUNT(*) FROM city
+GROUP BY country_id
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+```
+
+<br>
+
+
 
 
 
