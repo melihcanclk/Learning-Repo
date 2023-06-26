@@ -23,7 +23,7 @@ public class User {
         User.counter = counter;
     }
 
-    {
+    static {
         System.out.println("Static Code Block");
     }
 }
