@@ -1,11 +1,17 @@
+import java.util.LinkedList;
+import java.util.List;
 
 public class Main{
     public static void main(String[] args) {
-        Player p1 = new Player("Melihcan Cilek", 1);
-        System.out.println(Player.count);
+        Course c1 = new Course("Math", "MAT101", 10);
+        Course c2 = new Course("Physics", "PHYS101", 100);
+        Course c3 = new Course("Turkish", "TUR101", 80);
 
-        Player p2 = new Player("Patika.Dev", 2);
+        List<Course> courseList = new LinkedList<>();
+        courseList.add(c1);
+        courseList.add(c2);
+        courseList.add(c3);
 
-        System.out.println(Player.count);
+        System.out.println(Course.avg(courseList));
     }
 }
