@@ -15,6 +15,7 @@
  - **SQL Ödev 02 | BETWEEN ve IN - <a href="#sql-ödev-02--between-ve-in">Tıklayın</a>**
  - **SQL Ödev 03 | LIKE and ILIKE Operators - <a href="#sql-ödev-03--like-and-ilike-operators">Tıklayın</a>**
  - **SQL Ödev 04 | Aggregation Functions - <a href="#sql-ödev-04--distinct-and-count">Tıklayın</a>**
+ - **SQL Ödev 05 | ORDER BY | LIMIT | OFFSET - <a href="#sql-ödev-05--order-by--limit--offset">Tıklayın</a>**
 
 <br>
 
@@ -180,6 +181,44 @@ WHERE country LIKE '_____';
 ```sql
 SELECT COUNT(*) FROM city
 WHERE city ILIKE '%r';
+```
+
+<br>
+
+## SQL Ödev 05 | ORDER BY | LIMIT | OFFSET
+
+<br>
+
+> **1.** film tablosunda bulunan ve film ismi **(title)** 'n' karakteri ile **biten** en uzun **(length)** 5 filmi sıralayınız.
+
+```sql
+SELECT * FROM film
+WHERE title LIKE '%n'
+ORDER BY length DESC
+LIMIT 5;
+```
+
+<br>
+
+> **2.** film tablosunda bulunan ve film ismi **(title)** 'n' karakteri ile **biten** en kısa **(length)** ikinci 5 filmi sıralayınız.
+
+```sql
+SELECT * FROM film
+WHERE title LIKE '%n'
+ORDER BY length ASC
+OFFSET 5
+LIMIT 5;
+```
+
+<br>
+
+> **3.** customer tablosunda bulunan **last_name** sütununa göre azalan şekilde yapilan siralamada store_id 1 olmak koşuluyla ilk 4 veriyi sıralayınız.
+
+```sql
+SELECT * FROM customer
+WHERE store_id = 1
+ORDER BY last_name DESC
+LIMIT 4;
 ```
 
 <br>
