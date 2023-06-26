@@ -12,6 +12,9 @@
 <br>
 
  - **SQL Ödev 01 | WHERE and Comparison & Logical Operations - <a href="#sql-ödev-01--where-ve-karşılaştırma--mantıksal-operatörler">Tıklayın. </a>**
+ - **SQL Ödev 02 | BETWEEN ve IN - <a href="#sql-ödev-02--between-ve-in">Tıklayın</a>**
+
+
 
 <br>
 
@@ -60,3 +63,36 @@ WHERE first_name = 'Mary';
 SELECT * FROM film
 WHERE NOT length > 50 AND NOT rental_rate = 2.99 OR rental_rate = 4.99;
 ```
+
+<br>
+
+## SQL Ödev 02 | BETWEEN ve IN
+
+<br>
+
+> **1.** film tablosunda bulunan tum sütunlardaki verileri replacement_cost degeri 12.99'dan buyuk 16.99'dan küçük olma kosuluyla sıralayınız. (BETWEEN - AND yapısını kullanınız.)
+
+```sql
+SELECT * FROM film
+WHERE replacement_cost BETWEEN 12.99 AND 16.99;
+```
+
+<br>
+
+> **2.** actor tablosunda bulunan **first_name** ve **last_name** sütunlardaki verileri **first_name** 'Penelope' **VE** last_name 'Guiness' olma koşuluyla sıralayınız. (IN operatörünü kullanınız.)
+
+```sql
+SELECT first_name, last_name FROM actor
+WHERE first_name IN ('Penelope') AND last_name IN ('Guiness');
+```
+
+<br>
+
+> **3.** film tablosunda bulunan tüm sütunlardaki verileri **rental_rate** 0.99, 2.99, 4.99 **VE** **replacement_cost** 12.99, 15.99, 28.99 olma koşullarıyla sıralayınız.
+
+```sql
+SELECT * FROM film
+WHERE rental_rate IN (0.99, 2.99, 4.99) AND replacement_cost IN (12.99, 15.99, 28.99);
+```
+
+<br>
