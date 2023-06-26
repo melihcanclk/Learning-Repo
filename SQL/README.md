@@ -13,7 +13,8 @@
 
  - **SQL Ödev 01 | WHERE and Comparison & Logical Operations - <a href="#sql-ödev-01--where-ve-karşılaştırma--mantıksal-operatörler">Tıklayın. </a>**
  - **SQL Ödev 02 | BETWEEN ve IN - <a href="#sql-ödev-02--between-ve-in">Tıklayın</a>**
-
+ - **SQL Ödev 03 | LIKE and ILIKE Operators - <a href="#sql-ödev-03--like-and-ilike-operators">Tıklayın</a>**
+ 
 
 
 <br>
@@ -93,6 +94,46 @@ WHERE first_name IN ('Penelope') AND last_name IN ('Guiness');
 ```sql
 SELECT * FROM film
 WHERE rental_rate IN (0.99, 2.99, 4.99) AND replacement_cost IN (12.99, 15.99, 28.99);
+```
+
+<br>
+
+## SQL Ödev 03 | LIKE and ILIKE Operators
+
+<br>
+
+> **1.** country tablosunda bulunan **country** sütunundaki ülke isimlerinden **'A'** veya **'a'** karakteri ile başlayıp **'n'** karakteri ile sonlananları sıralayınız.
+
+```sql
+SELECT country FROM country
+WHERE country LIKE 'A%n';
+```
+
+<br>
+
+> **2.** country tablosunda bulunan **country** sütunundaki ülke isimlerinden en az 6 karakterden oluşan ve son karakteri **'n'** karakteri ile sonlananları sıralayınız.
+
+```sql
+SELECT country FROM country
+WHERE country LIKE '_____%n';
+```
+
+<br>
+
+> **3.** film tablosunda bulunan **title** sütunundaki film isimlerinden en az 4 adet buyuk ya da kucuk harf farketmeksizin **'T'** karakteri ile başlayanları sıralayınız.
+
+```sql
+SELECT title FROM film
+WHERE title ILIKE 'T%T%T%T%';
+```
+
+<br>
+
+> **4.** film tablosunda bulunan tüm sütunlardaki verilerden **title** 'C' karakteri ile başlayan ve **uzunluğu** (length) 90 dan büyük olan ve **rental_rate** 2.99 olan verileri sıralayınız.
+
+```sql
+SELECT * FROM film
+WHERE title LIKE 'C%' AND length > 90 AND rental_rate = 2.99;
 ```
 
 <br>
