@@ -6,7 +6,7 @@
 
 <br>
 
-> #### Bu repo'da [Patika](https://academy.patika.dev/) SQL eğitiminde yapmış oldugum bütün ödevler bulunmaktadır.
+> #### Bu repo'da [Patika](https://academy.patika.dev/) [SQL Egitimi](https://academy.patika.dev/tr/courses/sql)nde yapmış oldugum bütün ödevler bulunmaktadır.
 
 
 <br>
