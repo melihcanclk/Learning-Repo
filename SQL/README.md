@@ -20,6 +20,7 @@
  - **SQL Ödev 07 | GROUP BY | HAVING - <a href="#sql-ödev-07--group-by--having">Tıklayın</a>**
  - **SQL Ödev 08 | CREATE TABLE | UPDATE DATAS - <a href="#sql-ödev-08--create-table--update-datas">Tıklayın</a>**
  - **SQL Ödev 09 | INNER JOIN - <a href="#sql-ödev-09--inner-join">Tıklayın</a>**
+ - **SQL Ödev 10 | LEFT JOIN | RIGHT JOIN | FULL JOIN - <a href="#sql-ödev-10--left-join--right-join--full-join">Tıklayın</a>**
 
 <br>
 
@@ -512,4 +513,37 @@ INNER JOIN rental ON customer.customer_id = rental.customer_id;
 
 <br>
 
+
+## SQL Ödev 10 | LEFT JOIN | RIGHT JOIN | FULL JOIN
+
+<br>
+
+> **1.** city tablosu ile country tablosunda bulunan **şehir** (**city**) ve **ülke** (**country**) isimlerini **LEFT JOIN** kullanarak sorgulayınız.
+
+```sql
+SELECT city, country FROM city
+LEFT JOIN country ON city.country_id = country.country_id;
+```
+
+<br>
+
+> **2.** customer tablosu ile payment tablosunda bulunan **payment_id** ile customer tablosundaki **first_name** ve **last_name** isimlerini birlikte görebileceğimiz **RIGHT JOIN** sorgusunu yazınız.
+
+```sql
+SELECT payment.payment_id, customer.first_name, customer.last_name
+FROM customer
+RIGHT JOIN payment ON customer.customer_id = payment.customer_id;
+```
+
+<br>
+
+> **3.** customer tablosu ile rental tablosunda bulunan **rental_id** ile customer tablosundaki **first_name** ve **last_name** isimlerini birlikte görebileceğimiz **FULL JOIN** sorgusunu yazınız.
+
+```sql
+SELECT rental.rental_id, customer.first_name, customer.last_name
+FROM customer
+FULL JOIN rental ON customer.customer_id = rental.customer_id;
+```
+
+<br>
 
