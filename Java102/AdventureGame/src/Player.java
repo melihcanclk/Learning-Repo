@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -15,24 +14,27 @@ enum PlayerType {
 
 public class Player {
 
-    private String name;
+    private final String name;
 
     private Inventory inventory;
 
-    GameChar gameChar;
+    private static GameChar gameChar;
 
+    private Location location;
+
+    public GameChar getGameChar() {
+        return gameChar;
+    }
 
     public Player(String name) {
         this.name = name;
+        this.inventory = new Inventory();
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public Inventory getInventory() {
         return inventory;
@@ -42,12 +44,31 @@ public class Player {
         this.inventory = inventory;
     }
 
-    public void selectCharacter() {
-        List<GameChar> gameCharList = new ArrayList<>();
-        gameCharList.add(new Samurai());
-        gameCharList.add(new Archer());
-        gameCharList.add(new Knight());
+    public void printPlayerInfo(){
+        System.out.println("=======================================================");
+        System.out.println("Name:" + this.getName());
+        System.out.println("Player Type:" + this.getGameChar().getType().name());
+        System.out.println("Damage:" + this.getGameChar().getDamage());
+        System.out.println("Health:" + this.getGameChar().getHealth());
+        System.out.println("Money:" + this.getGameChar().getMoney());
+        Weapon weapon = this.getInventory().getWeapon();
+        Armor armor = this.getInventory().getArmor();
+        if(weapon != null){
+            System.out.println("Weapon: " + weapon.getWeaponType().name());
+        }else{
+            System.out.println("Weapon Not Found");
+        }
 
+        if(armor != null){
+            System.out.println("Weapon: " + armor.getType().name());
+        }else{
+            System.out.println("Armor Not Found");
+        }
+        System.out.println("=======================================================");
+
+    }
+
+    public void selectCharacter(List<GameChar> gameCharList) {
         for (int i = 0; i < gameCharList.size(); i++) {
             System.out.println(i + 1 + ". " + gameCharList.get(i).getType()
                     + " - Damage: " + gameCharList.get(i).getDamage()
@@ -59,13 +80,38 @@ public class Player {
         System.out.println("Lutfen karakterinizi seciniz:");
         Scanner sc = new Scanner(System.in);
         switch (sc.nextInt()) {
-            case 1 -> gameChar = new Samurai();
-            case 2 -> gameChar = new Archer();
-            case 3 -> gameChar = new Knight();
+            case 1 -> Player.gameChar = new Knight();
+            case 2 -> Player.gameChar = new Samurai();
+            case 3 -> Player.gameChar = new Archer();
             default -> exit(0);
         }
 
         System.out.println(gameChar.getType().name() + " is selected!");
 
     }
+
+    public boolean selectLocation(List<Location> locationList) {
+        printPlayerInfo();
+        for (int i = 0; i < locationList.size(); i++) {
+            System.out.println((i + 1) + ". " + locationList.get(i).getName());
+        }
+        System.out.println("3. Quit");
+        System.out.println("Please select your location");
+        Scanner sc = new Scanner(System.in);
+        switch (sc.nextInt()) {
+            case 2 -> location = new ToolStore(this);
+            case 3 -> {
+                return false;
+            }
+            default -> location = new SafeHouse(this);
+        }
+
+        System.out.println(location.getName() + " is selected!");
+        return true;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
 }

@@ -3,6 +3,7 @@ public abstract class GameChar {
     private int damage;
     private int health;
     private int money;
+
     boolean isObstacle;
     private PlayerType type;
 
@@ -45,4 +46,6 @@ public abstract class GameChar {
     public void setType(PlayerType type) {
         this.type = type;
     }
+
+    public abstract int getDefaulthealth();
 }
