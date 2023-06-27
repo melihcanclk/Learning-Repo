@@ -6,7 +6,7 @@ public class SafeHouse extends Location {
     }
 
     @Override
-    public boolean onLocation(ObjectLists<Weapon> objectLists) {
+    public boolean onLocation(ListOfListObjects listOfListObjects) {
         System.out.println("Welcome to " + this.getName());
         getPlayer().getGameChar().getDefaulthealth();
         System.out.println("Your HP is " + getPlayer().getGameChar().getHealth() + " now");

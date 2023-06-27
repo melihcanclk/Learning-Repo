@@ -4,13 +4,8 @@ public class Game {
     private static final Scanner sc = new Scanner(System.in);
 
     private static void start() {
-        ObjectLists<GameChar> gameCharObjectLists = new ObjectLists<>();
-        ObjectLists<Location> locationObjectLists = new ObjectLists<>();
-        ObjectLists<Weapon> weaponObjectLists = new ObjectLists<>();
 
-        gameCharObjectLists.addToList(new Knight(), new Samurai(), new Archer());
-        locationObjectLists.addToList(new SafeHouse(null), new ToolStore(null));
-        weaponObjectLists.addToList(new Gun(), new Rifle(), new Sword());
+        ListOfListObjects listOfListObjects = new ListOfListObjects();
 
         System.out.println("Oyunumuza hos geldiniz.");
         System.out.print("Lutfen isminizi giriniz:");
@@ -18,9 +13,9 @@ public class Game {
 
         Player player = new Player(name);
         System.out.println(player.getName() + " hosgeldin!");
-        player.selectCharacter(gameCharObjectLists.getList());
-        while (player.selectLocation(locationObjectLists.getList())) {
-            if (!player.getLocation().onLocation(weaponObjectLists))
+        player.selectCharacter(listOfListObjects.getGameCharListedObjects());
+        while (player.selectLocation(listOfListObjects.getLocationListedObjects())) {
+            if (!player.getLocation().onLocation(listOfListObjects))
                 break;
         }
     }

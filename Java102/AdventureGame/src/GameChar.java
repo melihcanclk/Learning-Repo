@@ -1,4 +1,3 @@
-
 public abstract class GameChar {
     private int damage;
     private int health;

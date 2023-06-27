@@ -1,4 +1,4 @@
-public class Knight extends GameChar {
+public class Knight extends GameChar{
     public static final int DEFAULT_HP = 24;
 
     public Knight() {

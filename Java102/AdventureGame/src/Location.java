@@ -10,7 +10,7 @@ public abstract class Location {
         this.player = player;
     }
 
-    public abstract boolean onLocation(ObjectLists<Weapon> objectLists);
+    public abstract boolean onLocation(ListOfListObjects listOfListObjects);
 
     public Player getPlayer() {
         return this.player;

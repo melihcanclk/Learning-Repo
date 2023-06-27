@@ -1,4 +1,4 @@
-public class Samurai extends GameChar {
+public class Samurai extends GameChar{
     public static final int DEFAULT_HP = 21;
 
     public Samurai() {

@@ -8,13 +8,12 @@ public class ToolStore extends Location {
     }
 
     @Override
-    public boolean onLocation(ObjectLists<Weapon> objectLists) {
+    public boolean onLocation(ListOfListObjects listOfListObjects) {
         System.out.println("Welcome to " + this.getName());
-        getPlayer().printPlayerInfo();
         int inp = 1;
 
         do {
-
+            getPlayer().printPlayerInfo();
             System.out.println("Which equipment do you want to buy?");
             System.out.println("1. Weapons");
             System.out.println("2. Armors");
@@ -22,8 +21,8 @@ public class ToolStore extends Location {
             inp = sc.nextInt();
 
             switch (inp) {
-                case 1 -> weaponsMenu(objectLists);
-                case 2 -> armorsMenu();
+                case 1 -> weaponsMenu(listOfListObjects.getWeaponListedObjects());
+                case 2 -> armorsMenu(listOfListObjects.getArmorListedObjects());
                 case 3 -> {
                     System.out.println("Exiting From " + this.getName());
                     return true;
@@ -33,19 +32,13 @@ public class ToolStore extends Location {
         return true;
     }
 
-    private void armorsMenu() {
-        System.out.println("Armors");
 
-        return;
-    }
 
-    private void weaponsMenu(ObjectLists<Weapon> objectLists) {
-        List<Weapon> weaponList = objectLists.getList();
-
+    private void weaponsMenu(List<Weapon> weaponList) {
         System.out.println("Weapons are shown below");
         int i = 1;
         for (Weapon w : weaponList) {
-            System.out.println(i + ". " + w.getWeaponType().name() + " - Damage: " + w.getDamage() + " - Money: " + w.getMoney());
+            System.out.println(i + ". " + w.getWeaponType().name() + " - Damage: " + w.getDamage() + " - Price: " + w.getPrice());
             i++;
         }
         System.out.print("Select Weapon:");
@@ -60,25 +53,70 @@ public class ToolStore extends Location {
         buyWeapon(weaponList, selectedWeapon);
     }
 
-    private void buyWeapon(List<Weapon> weaponList, int selectedWeapon){
-        if (getPlayer().getGameChar().getMoney() >= weaponList.get(selectedWeapon).getMoney()) {
-            int playerDamage = getPlayer().getGameChar().getDamage();
-            int newWeaponDamage = weaponList.get(selectedWeapon).getDamage();
-
-            if(getPlayer().getInventory().getWeapon() == null){
-                getPlayer().getGameChar().setDamage(playerDamage + newWeaponDamage);
-            }else{
-                int oldWeaponDamage = getPlayer().getInventory().getWeapon().getDamage();
-                getPlayer().getGameChar().setDamage(playerDamage - oldWeaponDamage + newWeaponDamage);
-            }
-            getPlayer().getInventory().setWeapon(weaponList.get(selectedWeapon));
-            getPlayer().getGameChar().setMoney(getPlayer().getGameChar().getMoney() - weaponList.get(selectedWeapon).getMoney());
-
-            System.out.println(getPlayer().getName() + " buy " + weaponList.get(selectedWeapon).getWeaponType() + " successfully completed");
-            System.out.println(getPlayer().getName() + " has " + getPlayer().getGameChar().getDamage() + " damage now.");
-        }else{
-            System.out.println("You don't have enough money to buy " + weaponList.get(selectedWeapon).getWeaponType());
+    private void armorsMenu(List<Armor> armorList) {
+        System.out.println("Armors are shown below");
+        int i = 1;
+        for (Armor a : armorList) {
+            System.out.println(i + ". " + a.getType().name() + " - Defence: " + a.getDefence() + " - Price: " + a.getPrice());
+            i++;
         }
+        System.out.print("Select Armor:");
+        int selectedArmor = sc.nextInt();
+
+        while (selectedArmor < 1 || selectedArmor > armorList.size()) {
+            System.out.println("Please Try Again!");
+            selectedArmor = sc.nextInt();
+        }
+        selectedArmor -=1;
+
+        buyArmor(armorList, selectedArmor);
+        return;
+    }
+    private void buyWeapon(List<Weapon> weaponList, int selectedWeaponIndex){
+        int playerDamage = getPlayer().getGameChar().getDamage();
+        Weapon playerWeapon = getPlayer().getInventory().getWeapon();
+        Weapon selectedWeapon = weaponList.get(selectedWeaponIndex);
+        int playerMoney = getPlayer().getGameChar().getMoney();
+        int weaponPrice = weaponList.get(selectedWeaponIndex).getPrice();
+
+        if (playerMoney < weaponPrice) {
+            System.out.println("You don't have enough money to buy " + selectedWeapon.getWeaponType());
+            return;
+        }
+
+        if(playerWeapon == null){
+            getPlayer().getGameChar().setDamage(playerDamage + selectedWeapon.getDamage());
+        }else{
+            if(playerWeapon.getWeaponType() == selectedWeapon.getWeaponType()){
+                System.out.println("You already have that weapon, please select another one.");
+                return;
+            }
+
+            getPlayer().getGameChar().setDamage(playerDamage - playerWeapon.getDamage() + selectedWeapon.getDamage());
+        }
+        getPlayer().getInventory().setWeapon(selectedWeapon);
+        getPlayer().getGameChar().setMoney(playerMoney - weaponPrice);
+    }
+
+    private void buyArmor(List<Armor> armorList, int selectedArmorIndex){
+        Armor playerArmor = getPlayer().getInventory().getArmor();
+        Armor selectedArmor = armorList.get(selectedArmorIndex);
+        int playerMoney = getPlayer().getGameChar().getMoney();
+        int armorPrice = selectedArmor.getPrice();
+
+        if(playerMoney < armorPrice){
+            System.out.println("You don't have enough money to buy " + selectedArmor.getType());
+            return;
+        }
+
+        if(playerArmor != null){
+            if(playerArmor.getType() == selectedArmor.getType()){
+                System.out.println("You already have that weapon, please select another one.");
+                return;
+            }
+        }
+        getPlayer().getInventory().setArmor(selectedArmor);
+        getPlayer().getGameChar().setMoney(playerMoney - armorPrice);
     }
 
 }

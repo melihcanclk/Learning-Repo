@@ -1,4 +1,4 @@
-public class Archer extends GameChar {
+public class Archer extends GameChar{
     public static final int DEFAULT_HP = 18;
 
     public Archer() {

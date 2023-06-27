@@ -1,31 +1,17 @@
-import java.util.ArrayList;
-import java.util.List;
-
 enum WeaponType{
     GUN,
     SWORD,
     RIFLE
 }
-public class Weapon {
+public abstract class Weapon {
     private WeaponType weaponType;
     private int damage;
-    private int money;
-
-    private static final List<Weapon> weaponList = new ArrayList<>();
-    static {
-        weaponList.add(new Weapon(WeaponType.GUN, 2, 25));
-        weaponList.add(new Weapon(WeaponType.SWORD, 3, 35));
-        weaponList.add(new Weapon(WeaponType.RIFLE, 7, 45));
-    }
+    private int price;
 
     public Weapon(WeaponType weaponType, int damage, int money) {
         this.weaponType = weaponType;
         this.damage = damage;
-        this.money = money;
-    }
-
-    public static List<Weapon> getWeaponList(){
-        return weaponList;
+        this.price = money;
     }
 
     public WeaponType getWeaponType() {
@@ -44,11 +30,11 @@ public class Weapon {
         this.damage = damage;
     }
 
-    public int getMoney() {
-        return money;
+    public int getPrice() {
+        return price;
     }
 
-    public void setMoney(int money) {
-        this.money = money;
+    public void setPrice(int price) {
+        this.price = price;
     }
 }

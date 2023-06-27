@@ -4,9 +4,7 @@ public class Inventory {
 
     private boolean water;
     private boolean food;
-
     private Weapon weapon;
-
     private Armor armor;
 
     public Inventory() {

@@ -16,6 +16,7 @@ public class Player {
 
     private final String name;
 
+
     private Inventory inventory;
 
     private static GameChar gameChar;
@@ -54,13 +55,18 @@ public class Player {
         Weapon weapon = this.getInventory().getWeapon();
         Armor armor = this.getInventory().getArmor();
         if(weapon != null){
-            System.out.println("Weapon: " + weapon.getWeaponType().name());
+            System.out.println("Weapon: " + weapon.getWeaponType().name() +
+                    " - Damage: " + weapon.getDamage() +
+                    " - Price: " + weapon.getPrice());
+
         }else{
             System.out.println("Weapon Not Found");
         }
 
         if(armor != null){
-            System.out.println("Weapon: " + armor.getType().name());
+            System.out.println("Armor: " + armor.getType().name() +
+                    " - Defence: " + armor.getDefence() +
+                    " - Price: " + armor.getPrice());
         }else{
             System.out.println("Armor Not Found");
         }
