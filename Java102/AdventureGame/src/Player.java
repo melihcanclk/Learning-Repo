@@ -1,5 +1,8 @@
+import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 import static java.lang.System.exit;
 
@@ -96,7 +99,23 @@ public class Player {
 
     }
 
+    private boolean controlGameEnd(List<Location> locationList){
+        // if all the obstacles are killed, then end the game
+        Stream<Boolean> booleanStream = locationList.stream().map((location) ->
+                Arrays.stream(location.getObstacles()).allMatch(Objects::isNull)
+        );
+        boolean isAllPassed = booleanStream.allMatch((val) -> val);
+        if(isAllPassed){
+            System.out.println("You killed all obstacles, Congratzzz!!!");
+            return true;
+        }
+        return false;
+    }
+
     public boolean selectLocation(List<Location> locationList) {
+       if(controlGameEnd(locationList))
+           return false;
+
         printPlayerInfo(this);
         int selectedLocation = 1;
         do{

@@ -3,6 +3,7 @@ public class SafeHouse extends Location {
     public SafeHouse(Player player) {
         super(player);
         setName("Safe House");
+        setObstaclesNull();
     }
 
     @Override

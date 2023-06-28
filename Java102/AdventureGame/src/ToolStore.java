@@ -5,6 +5,7 @@ public class ToolStore extends Location {
     public ToolStore(Player player) {
         super(player);
         setName("Tool Store");
+        setObstaclesNull();
     }
 
     @Override

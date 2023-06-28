@@ -7,7 +7,7 @@ public abstract class Location {
     private Player player;
     private String name;
 
-    private final Obstacle[] obstacles;
+    private Obstacle[] obstacles;
 
     protected Scanner sc = new Scanner(System.in);
 
@@ -128,5 +128,9 @@ public abstract class Location {
 
     public Obstacle[] getObstacles() {
         return obstacles;
+    }
+
+    protected void setObstaclesNull(){
+        Arrays.fill(obstacles, null);
     }
 }
