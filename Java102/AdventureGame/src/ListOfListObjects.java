@@ -10,7 +10,12 @@ public class ListOfListObjects {
 
     public ListOfListObjects() {
         gameCharListedObjects.addAll(Arrays.asList(new Knight(), new Samurai(), new Archer()));
-        locationListedObjects.addAll(Arrays.asList(new SafeHouse(null), new ToolStore(null)));
+        locationListedObjects.addAll(Arrays.asList(
+                new SafeHouse(null),
+                new ToolStore(null),
+                new Forest(null),
+                new Cave(null),
+                new River(null)));
         weaponListedObjects.addAll(Arrays.asList(new Gun(), new Rifle(), new Sword()));
         armorListedObjects.addAll(Arrays.asList(new LightArmor(), new MediumArmor(), new HeavyArmor()));
     }

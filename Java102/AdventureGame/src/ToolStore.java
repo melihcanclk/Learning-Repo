@@ -32,8 +32,6 @@ public class ToolStore extends Location {
         return true;
     }
 
-
-
     private void weaponsMenu(List<Weapon> weaponList) {
         System.out.println("Weapons are shown below");
         int i = 1;

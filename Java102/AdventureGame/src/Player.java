@@ -98,19 +98,21 @@ public class Player {
 
     public boolean selectLocation(List<Location> locationList) {
         printPlayerInfo();
-        for (int i = 0; i < locationList.size(); i++) {
-            System.out.println((i + 1) + ". " + locationList.get(i).getName());
-        }
-        System.out.println("3. Quit");
-        System.out.println("Please select your location");
-        Scanner sc = new Scanner(System.in);
-        switch (sc.nextInt()) {
-            case 2 -> location = new ToolStore(this);
-            case 3 -> {
-                return false;
+        int selectedLocation = 1;
+        do{
+            int i = 0;
+            for (; i < locationList.size(); i++) {
+                System.out.println((i + 1) + ". " + locationList.get(i).getName());
             }
-            default -> location = new SafeHouse(this);
-        }
+            System.out.println(i + ". Quit");
+            System.out.println("Please select your location");
+            Scanner sc = new Scanner(System.in);
+            selectedLocation = sc.nextInt();
+        }while (selectedLocation < 1 || selectedLocation > locationList.size());
+        selectedLocation -= 1;
+
+        location = locationList.get(selectedLocation);
+        location.setPlayer(this);
 
         System.out.println(location.getName() + " is selected!");
         return true;
