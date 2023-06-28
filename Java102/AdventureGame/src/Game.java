@@ -7,12 +7,12 @@ public class Game {
 
         ListOfListObjects listOfListObjects = new ListOfListObjects();
 
-        System.out.println("Oyunumuza hos geldiniz.");
-        System.out.print("Lutfen isminizi giriniz:");
+        System.out.println("Welcome to our text-based Adventure Game.");
+        System.out.print("Please enter your nickname:");
         String name = sc.next();
 
         Player player = new Player(name);
-        System.out.println(player.getName() + " hosgeldin!");
+        System.out.println(player.getName() + " Welcome!");
         player.selectCharacter(listOfListObjects.getGameCharListedObjects());
         while (player.selectLocation(listOfListObjects.getLocationListedObjects())) {
             if (!player.getLocation().onLocation(listOfListObjects))

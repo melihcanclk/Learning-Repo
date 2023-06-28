@@ -86,7 +86,7 @@ public class Player {
         }
 
         System.out.println("4. Quit From Game");
-        System.out.println("Lutfen karakterinizi seciniz:");
+        System.out.println("Please select your character:");
         Scanner sc = new Scanner(System.in);
         switch (sc.nextInt()) {
             case 1 -> Player.gameChar = new Knight();
