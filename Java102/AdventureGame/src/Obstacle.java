@@ -24,16 +24,18 @@ public abstract class Obstacle extends GameChar{
         }
     }
 
-    public static void printObstacles(String name, Obstacle[] obstacles){
-        System.out.println("Welcome to " + name);
+    public static void printObstacles(Obstacle[] obstacles){
         System.out.println("Obstacles that you should fight with are:");
         int i = 1;
         for (Obstacle obs : obstacles) {
-            System.out.println(i +
-                    "-> Name: " + obs.getType() +
-                    " - Health: " + obs.getHealth() +
-                    " - Damage: " + obs.getDamage());
-            i++;
+            if(obs != null){
+                System.out.println(i +
+                        "-> Name: " + obs.getType() +
+                        " - Health: " + obs.getHealth() +
+                        " - Damage: " + obs.getDamage());
+                i++;
+            }
+
         }
     }
 }

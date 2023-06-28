@@ -13,7 +13,7 @@ public class ToolStore extends Location {
         int inp = 1;
 
         do {
-            getPlayer().printPlayerInfo();
+            Player.printPlayerInfo(getPlayer());
             System.out.println("Which equipment do you want to buy?");
             System.out.println("1. Weapons");
             System.out.println("2. Armors");

@@ -45,15 +45,15 @@ public class Player {
         this.inventory = inventory;
     }
 
-    public void printPlayerInfo(){
+    public static void printPlayerInfo(Player player){
         System.out.println("=======================================================");
-        System.out.println("Name:" + this.getName());
-        System.out.println("Player Type:" + this.getGameChar().getType().name());
-        System.out.println("Damage:" + this.getGameChar().getDamage());
-        System.out.println("Health:" + this.getGameChar().getHealth());
-        System.out.println("Money:" + this.getGameChar().getMoney());
-        Weapon weapon = this.getInventory().getWeapon();
-        Armor armor = this.getInventory().getArmor();
+        System.out.println("Name:" + player.getName());
+        System.out.println("Player Type:" + player.getGameChar().getType().name());
+        System.out.println("Damage:" + player.getGameChar().getDamage());
+        System.out.println("Health:" + player.getGameChar().getHealth());
+        System.out.println("Money:" + player.getGameChar().getMoney());
+        Weapon weapon = player.getInventory().getWeapon();
+        Armor armor = player.getInventory().getArmor();
         if(weapon != null){
             System.out.println("Weapon: " + weapon.getWeaponType().name() +
                     " - Damage: " + weapon.getDamage() +
@@ -97,18 +97,22 @@ public class Player {
     }
 
     public boolean selectLocation(List<Location> locationList) {
-        printPlayerInfo();
+        printPlayerInfo(this);
         int selectedLocation = 1;
         do{
             int i = 0;
             for (; i < locationList.size(); i++) {
                 System.out.println((i + 1) + ". " + locationList.get(i).getName());
             }
-            System.out.println(i + ". Quit");
+            System.out.println((i + 1) + ". Quit");
             System.out.println("Please select your location");
             Scanner sc = new Scanner(System.in);
             selectedLocation = sc.nextInt();
+            if(selectedLocation == (i + 1)){
+                return false;
+            }
         }while (selectedLocation < 1 || selectedLocation > locationList.size());
+
         selectedLocation -= 1;
 
         location = locationList.get(selectedLocation);
