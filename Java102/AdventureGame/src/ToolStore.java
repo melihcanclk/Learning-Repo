@@ -9,7 +9,7 @@ public class ToolStore extends Location {
     }
 
     @Override
-    public boolean onLocation(ListOfListObjects listOfListObjects) {
+    public boolean onLocation(CollectionOfListObjects collectionOfListObjects) {
         System.out.println("Welcome to " + this.getName());
         int inp = 1;
 
@@ -22,8 +22,8 @@ public class ToolStore extends Location {
             inp = sc.nextInt();
 
             switch (inp) {
-                case 1 -> weaponsMenu(listOfListObjects.getWeaponListedObjects());
-                case 2 -> armorsMenu(listOfListObjects.getArmorListedObjects());
+                case 1 -> weaponsMenu(collectionOfListObjects.getWeaponListedObjects());
+                case 2 -> armorsMenu(collectionOfListObjects.getArmorListedObjects());
                 case 3 -> {
                     System.out.println("Exiting From " + this.getName());
                     return true;

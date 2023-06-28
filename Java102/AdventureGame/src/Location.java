@@ -22,7 +22,7 @@ public abstract class Location {
         Obstacle.getRandomObstacle(obstacles);
     }
 
-    public boolean onLocation(ListOfListObjects listOfListObjects) {
+    public boolean onLocation(CollectionOfListObjects collectionOfListObjects) {
         System.out.println("Welcome to " + this.getName());
         if(Arrays.stream(obstacles).allMatch(Objects::isNull)){
             System.out.println("There is no obstacle here.");

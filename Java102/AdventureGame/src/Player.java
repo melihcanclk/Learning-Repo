@@ -112,6 +112,7 @@ public class Player {
         return false;
     }
 
+
     public boolean selectLocation(List<Location> locationList) {
        if(controlGameEnd(locationList))
            return false;
