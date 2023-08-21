@@ -1,2 +1,2 @@
-# Patika-Repo
-My Patika Steps and the improvements have been done over academy.patika.dev
+# Learning-Repo
+My Learning Steps and the improvements have been done.
