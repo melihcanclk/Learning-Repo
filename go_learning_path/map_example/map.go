@@ -1,4 +1,4 @@
-package mapexample
+package main
 
 import (
 	"fmt"

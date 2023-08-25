@@ -1,4 +1,4 @@
-package closure
+package main
 
 import "fmt"
 

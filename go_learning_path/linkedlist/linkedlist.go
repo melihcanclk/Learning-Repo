@@ -1,4 +1,4 @@
-package linkedlist
+package main
 
 import (
 	"errors"
@@ -82,7 +82,10 @@ func main() {
 	ll.Add(8)
 	fmt.Println(ll)
 
-	ll.Remove(8)
+	_, err := ll.Remove(8)
+	if err != nil {
+		return
+	}
 	fmt.Println(ll)
 
 }

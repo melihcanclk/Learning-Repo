@@ -1,4 +1,4 @@
-package readfile
+package main
 
 import (
 	"fmt"
