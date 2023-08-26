@@ -1,12 +1,13 @@
 go 1.21.0
 
 use (
+	./closure
 	./getting_started
 	./greetings
 	./linkedlist
-	./read_file
 	./map_example
-	./closure
-	./word_count
+	./read_file
 	./reduce
+	./reduce/main
+	./word_count
 )
