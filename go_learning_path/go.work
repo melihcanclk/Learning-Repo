@@ -8,4 +8,5 @@ use (
 	./map_example
 	./closure
 	./word_count
+	./reduce
 )
