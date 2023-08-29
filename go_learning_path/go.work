@@ -13,4 +13,5 @@ use (
 	./goroutines
 	./channels
 	./close
+	./tree_implementation
 )
