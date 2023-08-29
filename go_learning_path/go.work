@@ -12,4 +12,5 @@ use (
 	./word_count
 	./goroutines
 	./channels
+	./close
 )
