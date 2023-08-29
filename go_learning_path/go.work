@@ -10,4 +10,6 @@ use (
 	./reduce
 	./reduce/main
 	./word_count
+	./goroutines
+	./channels
 )
