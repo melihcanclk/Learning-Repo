@@ -17,4 +17,5 @@ use (
 	./timers_and_tickers
 	./tree_implementation
 	./word_count
+	./worker_pools
 )
