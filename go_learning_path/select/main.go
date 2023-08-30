@@ -23,7 +23,7 @@ func main() {
 		select {
 		case msg1 := <-c:
 			fmt.Println("received", msg1, time.Since(start))
-			
+
 		case msg2 := <-c:
 			fmt.Println("received", msg2, time.Since(start))
 		}

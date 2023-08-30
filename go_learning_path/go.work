@@ -1,18 +1,20 @@
 go 1.21.0
 
 use (
+	./channel_directions
+	./channels
+	./close
 	./closure
 	./getting_started
+	./goroutines
 	./greetings
 	./linkedlist
 	./map_example
 	./read_file
 	./reduce
 	./reduce/main
-	./word_count
-	./goroutines
-	./channels
-	./close
+	./select
+	./timers_and_tickers
 	./tree_implementation
-	./channel_directions
+	./word_count
 )
