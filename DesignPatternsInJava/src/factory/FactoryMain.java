@@ -1,5 +1,12 @@
 package factory;
 
+
+/**
+ * We're going to create a Shape interface and concrete classes implementing the Shape interface. A factory class ShapeFactory is defined as a next step.
+ * FactoryPatternDemo, our demo class will use ShapeFactory to get a Shape object. It will pass information (CIRCLE / RECTANGLE / SQUARE) to
+ * ShapeFactory to get the type of object it needs.
+ * <a href="https://www.tutorialspoint.com/design_pattern/factory_pattern.htm">Factory Pattern</a>
+ */
 public class FactoryMain {
     public static void main(String[] args) {
         ShapeFactory sf = new ShapeFactory();
