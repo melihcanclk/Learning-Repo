@@ -43,12 +43,18 @@ func runMenu() error {
 
 		switch key {
 		case keyboard.KeyArrowUp:
-			if selectedIndex > 0 {
+
+			if selectedIndex == 0 {
+				selectedIndex = len(constants.Choices) - 1
+			} else if selectedIndex > 0 {
 				selectedIndex--
 			}
 
 		case keyboard.KeyArrowDown:
-			if selectedIndex < len(constants.Choices)-1 {
+
+			if selectedIndex == len(constants.Choices)-1 {
+				selectedIndex = 0
+			} else if selectedIndex < len(constants.Choices)-1 {
 				selectedIndex++
 			}
 
