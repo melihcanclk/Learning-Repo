@@ -20,3 +20,21 @@ As per the design pattern reference book Design Patterns - Elements of Reusable 
 | 3            | Behavioral Patterns<br/> These design patterns are specifically concerned with communication between objects.                                                                                                                                                                         |
 | 4 (Optional) | J2EE Patterns<br/> These design patterns are specifically concerned with the presentation tier. These patterns are identified by Sun Java Center.                                                                                                                                     |
 
+### Creational Patterns
+These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new operator. This gives program more flexibility in deciding which objects need to be created for a given use case.
+
+#### Factory Pattern
+Factory pattern is one of most used design pattern in Java. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.
+[Factory Pattern](https://github.com/melihcanclk/Learning-Repo/tree/master/DesignPatternsInJava/src/factory)
+
+#### Singleton Pattern
+Singleton pattern is one of the simplest design patterns in Java. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.
+[Singleton Pattern](https://github.com/melihcanclk/Learning-Repo/tree/master/DesignPatternsInJava/src/singleton)
+
+#### Prototype Pattern
+Prototype pattern refers to creating duplicate object while keeping performance in mind. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.
+[Prototype Pattern](https://github.com/melihcanclk/Learning-Repo/tree/master/DesignPatternsInJava/src/prototype)
+
+#### Builder Pattern
+Builder pattern builds a complex object using simple objects and using a step by step approach. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.
+[Builder Pattern](https://github.com/melihcanclk/Learning-Repo/tree/master/DesignPatternsInJava/src/builder)
