@@ -27,7 +27,7 @@ func chunkString(s string, chunkSize int) []string {
 	return chunks
 }
 
-func (t Todo) String() string {
+func (t *Todo) String() string {
 	formatted := fmt.Sprintf("%-5d", t.Id)
 
 	chunks := chunkString(t.Context, 60)
@@ -42,9 +42,9 @@ func (t Todo) String() string {
 	return formatted
 }
 
-func (t TodoList) String() string {
+func (t *TodoList) String() string {
 	for _, val := range t.Todos {
-		fmt.Println(val)
+		fmt.Println(&val)
 	}
 	return ""
 }
