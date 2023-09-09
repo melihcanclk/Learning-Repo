@@ -8,6 +8,6 @@ public class ChickenBurger extends Burger{
 
     @Override
     public float price() {
-        return 50.0f;
+        return 50.5f;
     }
 }

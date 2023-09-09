@@ -1,8 +1,8 @@
 package builder;
 
 public interface Item {
-    public String name();
-    public Packing packing();
-    public float price();
-    public String print();
+     String name();
+     Packing packing();
+     float price();
+     String print();
 }

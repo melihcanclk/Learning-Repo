@@ -7,7 +7,7 @@ package builder;
  * We are going to create an Item interface representing food items such as burgers and cold drinks and concrete classes
  * implementing the Item interface and a Packing interface representing packaging of food items and concrete classes
  * implementing the Packing interface as burger would be packed in wrapper and cold drink would be packed as bottle.
- * https://www.tutorialspoint.com/design_pattern/builder_pattern.htm
+ * <a href="https://www.tutorialspoint.com/design_pattern/builder_pattern.htm">Builder Pattern</a>
  */
 public class BuilderMain {
     public static void main(String[] args) {
