@@ -25,7 +25,7 @@ These design patterns provide a way to create objects while hiding the creation 
 
 #### Factory Pattern
 Factory pattern is one of most used design pattern in Java. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.
-[Factory Pattern](https://github.com/melihcanclk/Learning-Repo/tree/master/DesignPatternsInJava/src/factory)
+[Factory Pattern](src/factory)
 
 #### Singleton Pattern
 Singleton pattern is one of the simplest design patterns in Java. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.
