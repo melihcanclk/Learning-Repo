@@ -5,26 +5,26 @@ import (
 	"os"
 
 	"github.com/eiannone/keyboard"
-	"github.com/melihcanclk/Learning-Repo/todoappInGo/internal/additional"
+	"github.com/melihcanclk/Learning-Repo/todoappInGo/internal/additional/constants"
 	"github.com/melihcanclk/Learning-Repo/todoappInGo/internal/todo"
 )
 
 func ChoiceMenu(todolist *todo.TodoList, choiceChar string) error {
 
 	switch choiceChar {
-	case additional.Choices[0]:
+	case constants.Choices[0]:
 		listAddMenu(todolist)
 
-	case additional.Choices[1]:
+	case constants.Choices[1]:
 		listMenu(todolist)
 
-	case additional.Choices[2]:
+	case constants.Choices[2]:
 		listDeleteMenu(todolist)
 
-	case additional.Choices[3]:
+	case constants.Choices[3]:
 		listUpdateMenu(todolist)
 
-	case additional.Choices[4]:
+	case constants.Choices[4]:
 		fmt.Println("Goodbye!")
 		os.Exit(0)
 	default:

@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/melihcanclk/Learning-Repo/todoappInGo/internal/additional"
+	"github.com/melihcanclk/Learning-Repo/todoappInGo/internal/additional/constants"
+	additional "github.com/melihcanclk/Learning-Repo/todoappInGo/internal/additional/functions"
 	"github.com/melihcanclk/Learning-Repo/todoappInGo/internal/menu"
 	"github.com/melihcanclk/Learning-Repo/todoappInGo/internal/todo"
 
@@ -24,10 +25,10 @@ func runMenu() error {
 			_ = keyboard.Close()
 		}()
 		// Clear the screen
-		fmt.Print(additional.SCREEN_CLEAR)
+		fmt.Print(constants.SCREEN_CLEAR)
 
-		// Print the menu with selection
-		for index, choice := range additional.Choices {
+		// Print the menu with constants
+		for index, choice := range constants.Choices {
 			if index == selectedIndex {
 				fmt.Printf("➡ %s\n", choice)
 			} else {
@@ -47,7 +48,7 @@ func runMenu() error {
 			}
 
 		case keyboard.KeyArrowDown:
-			if selectedIndex < len(additional.Choices)-1 {
+			if selectedIndex < len(constants.Choices)-1 {
 				selectedIndex++
 			}
 
@@ -57,15 +58,15 @@ func runMenu() error {
 			return nil
 
 		case keyboard.KeyEnter:
-			if selectedIndex == len(additional.Choices)-1 {
+			if selectedIndex == len(constants.Choices)-1 {
 				fmt.Println("Goodbye!")
 				return nil
 			}
 			// Call the corresponding function based on selectedIndex
-			fmt.Printf("You choose: %s\n", additional.Choices[selectedIndex])
+			fmt.Printf("You choose: %s\n", constants.Choices[selectedIndex])
 			keyboard.Close()
 			// wait 2 seconds for simulation purpose
-			err := menu.ChoiceMenu(&todolist, additional.Choices[selectedIndex])
+			err := menu.ChoiceMenu(&todolist, constants.Choices[selectedIndex])
 			if err != nil {
 				if err.Error() == "interrupted" {
 					keyboard.Close()
@@ -84,11 +85,16 @@ func main() {
 
 	todo1 := &todo.Todo{
 		Id:       1,
-		Context:  "asdasdasdas",
+		Context:  "asdasdasddasasdasdasddasasdasdasddasas",
 		Deadline: *additional.GetTimeAfter(5.4),
 	}
-	todolist.Todos = append(todolist.Todos, *todo1)
-
+	todo2 := &todo.Todo{
+		Id:       1,
+		Context:  "asdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddasasdasdasddas",
+		Deadline: *additional.GetTimeAfter(5.4),
+	}
+	todolist.Add(todo1)
+	todolist.Add(todo2)
 	if err := runMenu(); err != nil {
 		panic(err)
 	}
