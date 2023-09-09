@@ -34,7 +34,7 @@ func (t *Todo) String() string {
 	formatted := fmt.Sprintf("%-5d", t.Id)
 
 	chunks := chunkString(t.Context, 60)
-	deadline := t.Deadline.Format(constants.TimeTemplate)
+	deadline := t.Deadline.Format(constants.DateTemplateWithTime)
 	if t.Deadline.IsZero() {
 		deadline = "No deadline"
 	}

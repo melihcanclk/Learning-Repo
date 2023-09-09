@@ -28,7 +28,7 @@ func listAddMenu(todoList *todo.TodoList) {
 	var err error
 	if choice == "y" {
 		for choice == "y" {
-			fmt.Print("Enter deadline (" + constants.TimeTemplate + "): ")
+			fmt.Print("Enter deadline (" + constants.DateTemplateWithTime + " or " + constants.DateTemplateWithoutTime + "): ")
 			scanner.Scan()
 			deadline := scanner.Text()
 

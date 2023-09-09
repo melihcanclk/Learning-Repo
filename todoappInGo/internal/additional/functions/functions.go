@@ -13,9 +13,21 @@ func GetTimeAfter(time_ref float64) *time.Time {
 }
 
 func ConvertStringToDate(date string) (time.Time, error) {
-	time, err := time.Parse(constants.TimeTemplate, date)
-	if err != nil {
-		return time, err
+	if checkIfDateIsValidWithTime(date) {
+		return time.Parse(constants.DateTemplateWithTime, date)
+	} else if checkIfDateIsValidWithoutTime(date) {
+		return time.Parse(constants.DateTemplateWithoutTime, date)
+	} else {
+		return time.Time{}, constants.ErrInvalidName
 	}
-	return time, nil
+}
+
+func checkIfDateIsValidWithTime(date string) bool {
+	_, err := time.Parse(constants.DateTemplateWithTime, date)
+	return err == nil
+}
+
+func checkIfDateIsValidWithoutTime(date string) bool {
+	_, err := time.Parse(constants.DateTemplateWithoutTime, date)
+	return err == nil
 }
