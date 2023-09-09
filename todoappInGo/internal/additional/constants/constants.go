@@ -29,3 +29,4 @@ var DateTemplateWithoutTime = "02/01/2006"
 var IdConstant = 0
 
 var ErrInvalidName error = errors.New("invalid date")
+var ErrDateBeforeNow error = errors.New("date is before now")
