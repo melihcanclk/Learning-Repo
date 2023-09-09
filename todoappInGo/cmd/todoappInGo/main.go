@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"time"
 
 	"github.com/melihcanclk/Learning-Repo/todoappInGo/internal/additional"
 	"github.com/melihcanclk/Learning-Repo/todoappInGo/internal/todo"
@@ -100,8 +99,6 @@ func runMenu() error {
 			keyboard.Close()
 			// wait 2 seconds for simulation purpose
 			choice(additional.Choices[selectedIndex])
-
-			time.Sleep(time.Second * 2)
 		default:
 			fmt.Println("Use the arrow keys to navigate and press Enter to select.")
 		}
