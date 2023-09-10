@@ -1,9 +1,5 @@
 package constants
 
-import (
-	"errors"
-)
-
 const SCREEN_CLEAR string = "\033[H\033[2J"
 
 var Choices = []string{
@@ -27,6 +23,3 @@ var DateTemplateWithTime = "02/01/2006 - 15:04:00"
 var DateTemplateWithoutTime = "02/01/2006"
 
 var IdConstant = 0
-
-var ErrInvalidName error = errors.New("invalid date")
-var ErrDateBeforeNow error = errors.New("date is before now")

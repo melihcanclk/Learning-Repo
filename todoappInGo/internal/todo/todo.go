@@ -71,3 +71,24 @@ func (t *TodoList) Add(todo *Todo) {
 	todo.Id = constants.IdConstant
 	t.Todos = append(t.Todos, *todo)
 }
+
+// return index of it, if not found, return error
+func (t *TodoList) Find(id int) (int, error) {
+	for i := range t.Todos {
+		if t.Todos[i].Id == id {
+			return i, nil
+		}
+	}
+
+	return -1, constants.ErrNotFound
+}
+
+func (t *TodoList) Delete(id int) error {
+	for i := range t.Todos {
+		if t.Todos[i].Id == id {
+			t.Todos = append(t.Todos[:i], t.Todos[i+1:]...)
+			return nil
+		}
+	}
+	return constants.ErrNotFound
+}
