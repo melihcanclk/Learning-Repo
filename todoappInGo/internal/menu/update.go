@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strconv"
 
 	"github.com/melihcanclk/Learning-Repo/todoappInGo/internal/todo"
 )
@@ -11,8 +12,24 @@ import (
 func listUpdateMenu(todoList *todo.TodoList) {
 	fmt.Println("Update Menu")
 	scanner := bufio.NewScanner(os.Stdin)
-	fmt.Print("Enter item name: ")
+	fmt.Print("Enter id that you want to update: ")
 	scanner.Scan()
-	name := scanner.Text()
-	fmt.Println(name)
+	text := scanner.Text()
+
+	id, err := strconv.Atoi(text)
+	if err != nil {
+		fmt.Println("Invalid id. Please enter a valid id.")
+		return
+
+	}
+
+	todo := todo.CreateTodo()
+	todo.Id = id
+	err = todoList.Update(id, todo)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	fmt.Println("Todo is updated.")
 }

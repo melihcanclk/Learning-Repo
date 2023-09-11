@@ -1,6 +1,7 @@
 package additional
 
 import (
+	"strconv"
 	"time"
 
 	"github.com/melihcanclk/Learning-Repo/todoappInGo/internal/additional/constants"
@@ -52,4 +53,8 @@ func checkIfDateIsValid(date string, template string) bool {
 	// if date is before now, return false
 	_, err := time.Parse(template, date)
 	return err == nil
+}
+
+func ConvertStringToInt(str string) (int, error) {
+	return strconv.Atoi(str)
 }
