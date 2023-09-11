@@ -11,6 +11,13 @@ import (
 	additional "github.com/melihcanclk/Learning-Repo/todoappInGo/internal/additional/functions"
 )
 
+type TodoListInterface interface {
+	Add(todo *Todo)
+	Delete(id int) error
+	Update(id int, todo *Todo) error
+	Find(id int) (int, error)
+}
+
 type Todo struct {
 	Id       int
 	Context  string

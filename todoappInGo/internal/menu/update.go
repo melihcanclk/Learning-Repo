@@ -9,7 +9,7 @@ import (
 	"github.com/melihcanclk/Learning-Repo/todoappInGo/internal/todo"
 )
 
-func listUpdateMenu(todoList *todo.TodoList) {
+func listUpdateMenu(todoList todo.TodoListInterface) {
 	fmt.Println("Update Menu")
 	scanner := bufio.NewScanner(os.Stdin)
 	fmt.Print("Enter id that you want to update: ")

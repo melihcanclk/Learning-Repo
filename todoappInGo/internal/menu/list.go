@@ -6,7 +6,7 @@ import (
 	"github.com/melihcanclk/Learning-Repo/todoappInGo/internal/todo"
 )
 
-func listMenu(todoList *todo.TodoList) {
+func listMenu(todoList todo.TodoListInterface) {
 	fmt.Println(todoList)
 
 }

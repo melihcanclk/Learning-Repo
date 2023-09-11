@@ -9,7 +9,7 @@ import (
 	"github.com/melihcanclk/Learning-Repo/todoappInGo/internal/todo"
 )
 
-func listDeleteMenu(todoList *todo.TodoList) {
+func listDeleteMenu(todoList todo.TodoListInterface) {
 	fmt.Println("Delete Menu")
 	scanner := bufio.NewScanner(os.Stdin)
 	fmt.Print("Enter ID of todo that you want to delete: ")
