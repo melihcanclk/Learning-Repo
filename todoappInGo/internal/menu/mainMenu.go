@@ -9,7 +9,7 @@ import (
 	"github.com/melihcanclk/Learning-Repo/todoappInGo/internal/todo"
 )
 
-func ChoiceMenu(todolist *todo.TodoList, choiceChar string) error {
+func ChoiceMenu(todolist todo.TodoListInterface, choiceChar string) error {
 
 	switch choiceChar {
 	case constants.Choices[0]:

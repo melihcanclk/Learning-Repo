@@ -16,6 +16,7 @@ type TodoListInterface interface {
 	Delete(id int) error
 	Update(id int, todo *Todo) error
 	Find(id int) (int, error)
+	Get(id int) (*Todo, error)
 }
 
 type Todo struct {
@@ -172,6 +173,15 @@ func (t *TodoList) Find(id int) (int, error) {
 	}
 
 	return -1, constants.ErrNotFound
+}
+
+func (t *TodoList) Get(id int) (*Todo, error) {
+	index, err := t.Find(id)
+	if err != nil {
+		fmt.Println(err)
+		return nil, err
+	}
+	return &t.Todos[index], nil
 }
 
 func (t *TodoList) Delete(id int) error {
