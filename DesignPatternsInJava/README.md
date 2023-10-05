@@ -42,3 +42,7 @@ Builder pattern builds a complex object using simple objects and using a step by
 #### Adapter Pattern
 Adapter pattern works as a bridge between two incompatible interfaces. This type of design pattern comes under structural pattern as this pattern combines the capability of two independent interfaces.
 [Adapter Pattern](src/adapter)
+
+#### Bridge Pattern
+Bridge is used when we need to decouple an abstraction from its implementation so that the two can vary independently. This type of design pattern comes under structural pattern as this pattern decouples implementation class and abstract class by providing a bridge structure between them.
+[Bridge Pattern](src/bridge)
