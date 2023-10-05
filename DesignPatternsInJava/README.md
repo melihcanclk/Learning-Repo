@@ -38,3 +38,7 @@ Prototype pattern refers to creating duplicate object while keeping performance 
 #### Builder Pattern
 Builder pattern builds a complex object using simple objects and using a step by step approach. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.
 [Builder Pattern](src/builder)
+
+#### Adapter Pattern
+Adapter pattern works as a bridge between two incompatible interfaces. This type of design pattern comes under structural pattern as this pattern combines the capability of two independent interfaces.
+[Adapter Pattern](src/adapter)
