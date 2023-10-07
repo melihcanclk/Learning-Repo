@@ -50,3 +50,7 @@ Bridge is used when we need to decouple an abstraction from its implementation s
 #### Filter Pattern
 Filter pattern or Criteria pattern is a design pattern that enables developers to filter a set of objects using different criteria and chaining them in a decoupled way through logical operations. This type of design pattern comes under structural pattern as this pattern combines multiple criteria to obtain single criteria.
 [Filter Pattern](src/filter)
+
+#### Composite Pattern
+Composite pattern is used where we need to treat a group of objects in similar way as a single object. Composite pattern composes objects in term of a tree structure to represent part as well as whole hierarchy. This type of design pattern comes under structural pattern as this pattern creates a tree structure of group of objects.
+[Composite Pattern](src/composite)
