@@ -46,3 +46,7 @@ Adapter pattern works as a bridge between two incompatible interfaces. This type
 #### Bridge Pattern
 Bridge is used when we need to decouple an abstraction from its implementation so that the two can vary independently. This type of design pattern comes under structural pattern as this pattern decouples implementation class and abstract class by providing a bridge structure between them.
 [Bridge Pattern](src/bridge)
+
+#### Filter Pattern
+Filter pattern or Criteria pattern is a design pattern that enables developers to filter a set of objects using different criteria and chaining them in a decoupled way through logical operations. This type of design pattern comes under structural pattern as this pattern combines multiple criteria to obtain single criteria.
+[Filter Pattern](src/filter)
