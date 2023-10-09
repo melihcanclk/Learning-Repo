@@ -58,3 +58,7 @@ Composite pattern is used where we need to treat a group of objects in similar w
 #### Decorator Pattern
 Decorator pattern allows a user to add new functionality to an existing object without altering its structure. This type of design pattern comes under structural pattern as this pattern acts as a wrapper to existing class.
 [Decorator Pattern](src/decorator)
+
+#### Facade Pattern
+Facade pattern hides the complexities of the system and provides an interface to the client using which the client can access the system. This type of design pattern comes under structural pattern as this pattern adds an interface to existing system to hide its complexities.
+[Facade Pattern](src/facade)
