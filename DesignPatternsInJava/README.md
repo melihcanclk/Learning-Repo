@@ -62,3 +62,7 @@ Decorator pattern allows a user to add new functionality to an existing object w
 #### Facade Pattern
 Facade pattern hides the complexities of the system and provides an interface to the client using which the client can access the system. This type of design pattern comes under structural pattern as this pattern adds an interface to existing system to hide its complexities.
 [Facade Pattern](src/facade)
+
+#### Flyweight Pattern
+Flyweight pattern is primarily used to reduce the number of objects created and to decrease memory footprint and increase performance. This type of design pattern comes under structural pattern as this pattern provides ways to decrease object count thus improving the object structure of application.
+[Flyweight Pattern](src/flyweight)
