@@ -4,6 +4,7 @@ import com.melihcanclk.DepartmentApplication.entities.Department;
 import com.melihcanclk.DepartmentApplication.errors.DepartmentNotFoundException;
 import com.melihcanclk.DepartmentApplication.services.DepartmentService;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,6 +16,9 @@ public class DepartmentController {
 
     private final DepartmentService departmentService;
     private final Logger LOGGER = Logger.getLogger(DepartmentController.class.getName());
+
+    @Value("${some.config}")
+    private String someConfigInApplicationProperties;
 
     DepartmentController(DepartmentService departmentService) {
         this.departmentService = departmentService;
@@ -30,6 +34,11 @@ public class DepartmentController {
     public List<Department> getAllDepartments() {
         LOGGER.info("Inside getAllDepartments method of DepartmentController");
         return departmentService.getAllDepartments();
+    }
+
+    @GetMapping("/some-config")
+    public String getSomeConfigInApplicationProperties() {
+        return someConfigInApplicationProperties;
     }
 
     @GetMapping("/{id}")
