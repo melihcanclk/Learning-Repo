@@ -1,0 +1,8 @@
+spring:
+    datasource:
+      username: sa
+      url: jdbc:h2:mem:dcbapp-prod
+      driverClassName: org.h2.Driver
+      password: psw123
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
