@@ -24,7 +24,6 @@ public class Department {
     private Long id;
 
     @NotBlank(message = "Name is mandatory")
-    @Length(min = 2, max = 100, message = "Name must be between 2 and 100 characters")
     // @Email
     // @Positive
     // @Negative
