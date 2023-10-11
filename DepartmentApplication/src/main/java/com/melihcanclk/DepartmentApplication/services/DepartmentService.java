@@ -1,6 +1,7 @@
 package com.melihcanclk.DepartmentApplication.services;
 
 import com.melihcanclk.DepartmentApplication.entities.Department;
+import com.melihcanclk.DepartmentApplication.errors.DepartmentNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,7 +12,7 @@ public interface DepartmentService {
 
     List<Department> getAllDepartments();
 
-    Department getDepartmentById(Long id);
+    Department getDepartmentById(Long id) throws DepartmentNotFoundException;
 
     void deleteDepartmentById(Long id);
 

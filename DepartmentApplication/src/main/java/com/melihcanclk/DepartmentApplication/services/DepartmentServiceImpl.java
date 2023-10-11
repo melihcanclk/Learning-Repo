@@ -1,10 +1,12 @@
 package com.melihcanclk.DepartmentApplication.services;
 
 import com.melihcanclk.DepartmentApplication.entities.Department;
+import com.melihcanclk.DepartmentApplication.errors.DepartmentNotFoundException;
 import com.melihcanclk.DepartmentApplication.repositories.DepartmentRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class DepartmentServiceImpl implements DepartmentService {
@@ -26,13 +28,10 @@ public class DepartmentServiceImpl implements DepartmentService {
     }
 
     @Override
-    public Department getDepartmentById(Long id) {
-        Department department = departmentRepository.findById(id).orElse(null);
-
-        if(department == null) {
-            throw new RuntimeException("Department not found for id: " + id);
-        }
-        return department;
+    public Department getDepartmentById(Long id) throws DepartmentNotFoundException {
+        return departmentRepository.findById(id).orElseThrow(
+                () -> new DepartmentNotFoundException("Department not found for id: " + id)
+        );
     }
 
     @Override
