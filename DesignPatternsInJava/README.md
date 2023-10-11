@@ -70,3 +70,15 @@ Flyweight pattern is primarily used to reduce the number of objects created and 
 #### Proxy Pattern
 In proxy pattern, a class represents functionality of another class. This type of design pattern comes under structural pattern. In proxy pattern, we create object having original object to interface its functionality to outer world.
 [Proxy Pattern](src/proxy)
+
+### Structural Patterns
+These design patterns concern class and object composition. Concept of inheritance is used to compose interfaces and define ways to compose objects to obtain new functionalities.
+
+#### Chain of Responsibility Pattern
+Chain of Responsibility pattern is used to achieve loose coupling in software design where a request from client is passed to a chain of objects to process them. Later, the object in the chain will decide themselves who will be processing the request and whether the request is required to be sent to the next object in the chain or not. This type of design pattern comes under behavioral patterns.
+[Chain of Responsibility Pattern](src/chainOfResponsibility)
+
+#### Command Pattern
+Command pattern is a data driven design pattern and falls under behavioral pattern category. A request is wrapped under an object as command and passed to invoker object. Invoker object looks for the appropriate object which can handle this command and passes the command to the corresponding object which executes the command.
+[Command Pattern](src/command)
+
