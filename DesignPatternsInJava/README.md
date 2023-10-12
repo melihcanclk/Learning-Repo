@@ -82,3 +82,8 @@ Chain of Responsibility pattern is used to achieve loose coupling in software de
 Command pattern is a data driven design pattern and falls under behavioral pattern category. A request is wrapped under an object as command and passed to invoker object. Invoker object looks for the appropriate object which can handle this command and passes the command to the corresponding object which executes the command.
 [Command Pattern](src/command)
 
+#### Interpreter Pattern
+Interpreter pattern provides a way to evaluate language grammar or expression. This type of pattern comes under behavioral pattern. This pattern involves implementing an expression interface which tells to interpret a particular context. This pattern is used in SQL parsing, symbol processing engine etc.
+[Interpreter Pattern](src/interpreter)
+
+
