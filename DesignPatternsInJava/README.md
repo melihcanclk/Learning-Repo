@@ -86,4 +86,6 @@ Command pattern is a data driven design pattern and falls under behavioral patte
 Interpreter pattern provides a way to evaluate language grammar or expression. This type of pattern comes under behavioral pattern. This pattern involves implementing an expression interface which tells to interpret a particular context. This pattern is used in SQL parsing, symbol processing engine etc.
 [Interpreter Pattern](src/interpreter)
 
-
+#### Iterator Pattern
+Iterator pattern is very commonly used design pattern in Java and .Net programming environment. This pattern is used to get a way to access the elements of a collection object in sequential manner without any need to know its underlying representation. Iterator pattern falls under behavioral pattern category.
+[Iterator Pattern](src/iterator)
