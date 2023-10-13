@@ -1,8 +1,12 @@
 package com.melihcanclk.DepartmentApplication.controllers;
 
+import com.melihcanclk.DepartmentApplication.entities.PasswordResetToken;
 import com.melihcanclk.DepartmentApplication.entities.User;
 import com.melihcanclk.DepartmentApplication.entities.VerificationToken;
+import com.melihcanclk.DepartmentApplication.event.PasswordResetCompleteEvent;
 import com.melihcanclk.DepartmentApplication.event.RegistrationCompleteEvent;
+import com.melihcanclk.DepartmentApplication.model.PasswordModel;
+import com.melihcanclk.DepartmentApplication.model.ResetPasswordInputDTO;
 import com.melihcanclk.DepartmentApplication.model.UserModel;
 import com.melihcanclk.DepartmentApplication.services.UserService;
 import jakarta.servlet.http.HttpServletRequest;
@@ -60,6 +64,45 @@ public class RegistrationController {
         ));
         return "Verification mail has been sent to your email address";
     }
+
+    @PostMapping("/resetPassword")
+    public String resetPassword(@RequestBody ResetPasswordInputDTO resetPasswordInputDTO, final HttpServletRequest request) {
+        User user = userService.findUserByEmail(resetPasswordInputDTO.getEmail());
+        if (user == null) {
+            return "Error: User not found";
+        }
+        eventPublisher.publishEvent(new PasswordResetCompleteEvent(
+                user,
+                getApplicationPath(request)
+        ));
+        return "Password reset mail has been sent to your email address";
+    }
+
+    @PostMapping("/savePassword")
+    public String savePassword(@RequestParam String token, @RequestBody PasswordModel passwordModel){
+        PasswordResetToken passwordResetToken = userService.getPasswordResetToken(token);
+        if (passwordResetToken == null) {
+            return "Error: Password reset token is not found";
+        }
+
+        User user = passwordResetToken.getUser();
+        if (user == null) {
+            return "Error: User not found";
+        }
+
+        userService.changeUserPassword(passwordResetToken, passwordModel);
+        return "Password has been changed successfully";
+
+    }
+
+    private String passwordResetTokenMail(User user, HttpServletRequest request) {
+        eventPublisher.publishEvent(new PasswordResetCompleteEvent(
+                user,
+                getApplicationPath(request)
+        ));
+        return "Password reset mail has been sent to your email address";
+    }
+
 
     @GetMapping("/hello")
     public String hello() {

@@ -1,8 +1,11 @@
 package com.melihcanclk.DepartmentApplication.services;
 
+import com.melihcanclk.DepartmentApplication.entities.PasswordResetToken;
 import com.melihcanclk.DepartmentApplication.entities.User;
 import com.melihcanclk.DepartmentApplication.entities.VerificationToken;
+import com.melihcanclk.DepartmentApplication.model.PasswordModel;
 import com.melihcanclk.DepartmentApplication.model.UserModel;
+import com.melihcanclk.DepartmentApplication.repositories.PasswordResetTokenRepository;
 import com.melihcanclk.DepartmentApplication.repositories.UserRepository;
 import com.melihcanclk.DepartmentApplication.repositories.VerificationTokenRepository;
 import jakarta.transaction.*;
@@ -23,6 +26,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private VerificationTokenRepository verificationTokenRepository;
+
+    @Autowired
+    private PasswordResetTokenRepository passwordResetTokenRepository;
 
     public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -89,5 +95,43 @@ public class UserServiceImpl implements UserService {
         }
         verificationTokenRepository.delete(verificationToken);
         return verificationToken;
+    }
+
+    @Override
+    public User findUserByEmail(String email) {
+        return userRepository.findUserByEmail(email);
+    }
+
+    @Override
+    public PasswordResetToken savePasswordResetToken(User user, String token) {
+        PasswordResetToken passwordResetToken = new PasswordResetToken(
+                user, token
+        );
+
+
+        passwordResetTokenRepository.save(passwordResetToken);
+        return passwordResetToken;
+    }
+
+    @Override
+        public PasswordResetToken getPasswordResetToken(String oldToken) {
+        return passwordResetTokenRepository.findByToken(oldToken);
+
+    }
+
+    @Override
+    public void changeUserPassword(PasswordResetToken passwordResetToken, PasswordModel passwordModel) {
+        User user = passwordResetToken.getUser();
+        // check password and matchingPassword  are equal
+        if (!passwordModel.getPassword().equals(passwordModel.getPasswordConfirm())) {
+            System.out.println("Password and passwordConfirm are not equal");
+            return;
+        }
+
+        // encode password
+        user.setPassword(passwordEncoder.encode(passwordModel.getPassword()));
+
+        userRepository.save(user);
+        passwordResetTokenRepository.delete(passwordResetToken);
     }
 }
