@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    username: sa
+    url: jdbc:h2:mem:dcbapp-dev
+    driverClassName: org.h2.Driver
+    password: psw123
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  security:
+    oauth2:
+      registration:
+        custom-client-oidc:
+          client-name: OAuth Client
+          client-id: oauth-client
+          client-secret: secret
+          provider: spring
+          authorization-grant-type: authorization_code
+          redirect-uri: http://localhost:8080/login/oauth2/code/{registrationId}
+          scope: openid
+        api-client-authorization-code:
+          provider: spring
+          client-name: API Client Authorization Code
+          client-id: api-client
+          client-secret: secret
+          authorization-grant-type: authorization_code
+          redirect-uri: http://localhost:8080/authorized
+          scope: api.read
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        exclude: "env, beans"

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9562374f-87d7-415e-baa7-c82754607945" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/DepartmentApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/config/FeatureEndpoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/config/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/controllers/DepartmentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/controllers/RegistrationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/CourseMaterial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/Department.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/ErrorMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/Guardian.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/PasswordResetToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/Teacher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/VerificationToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/errors/DepartmentNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/errors/RestExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/event/PasswordResetCompleteEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/event/RegistrationCompleteEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/event/listeners/PasswordResetCompleteEventListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/event/listeners/RegistrationCompleteEventListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/model/PasswordModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/model/ResetPasswordInputDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/model/UserModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/repositories/CourseMaterialRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/repositories/CourseRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/repositories/DepartmentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/repositories/PasswordResetTokenRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/repositories/StudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/repositories/TeacherRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/repositories/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/repositories/VerificationTokenRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/services/DepartmentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/services/DepartmentServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/services/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/services/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/resources/application-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/resources/application-prod.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/test/java/com/melihcanclk/DepartmentApplication/DepartmentApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/test/java/com/melihcanclk/DepartmentApplication/controllers/DepartmentControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/test/java/com/melihcanclk/DepartmentApplication/repositories/DepartmentRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/test/java/com/melihcanclk/DepartmentApplication/services/DepartmentServiceTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/DepartmentApplication">
+          <activation />
+        </task>
+        <task path="~/Desktop/github/Learning-Repo/DepartmentApplicationWrapper/OauthServer">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/OauthServer">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2WiEEeYTXN7Uozu7im2uEiv7q94" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  }
+}</component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle DepartmentApplication:build" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.DepartmentApplication">
+    <configuration name="DepartmentApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.melihcanclk.DepartmentApplication.DepartmentApplication" />
+      <module name="DepartmentApplicationWrapper.DepartmentApplication.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.melihcanclk.DepartmentApplication.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OauthServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.melihcanclk.OauthServer.OauthServerApplication" />
+      <module name="DepartmentApplicationWrapper.OauthServer.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.melihcanclk.OauthServer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepartmentApplicationWrapper [DepartmentApplication:build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="DepartmentApplication:build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="DepartmentApplicationWrapper [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="DepartmentApplicationWrapper:OauthServer [install]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/OauthServer" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="install" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.DepartmentApplicationWrapper [dependencies]" />
+        <item itemvalue="Gradle.DepartmentApplicationWrapper [DepartmentApplication:build]" />
+        <item itemvalue="Application.DepartmentApplication" />
+        <item itemvalue="Gradle.DepartmentApplicationWrapper:OauthServer [install]" />
+        <item itemvalue="Application.OauthServerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9562374f-87d7-415e-baa7-c82754607945" name="Changes" comment="" />
+      <created>1697206890237</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697206890237</updated>
+    </task>
+    <servers />
+  </component>
+</project>

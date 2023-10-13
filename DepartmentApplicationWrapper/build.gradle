@@ -1,0 +1,19 @@
+plugins {
+    id("java")
+}
+
+group = "org.melihcanclk"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':OauthServer')
+    implementation project(':DepartmentApplication')
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
