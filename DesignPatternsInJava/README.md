@@ -89,3 +89,7 @@ Interpreter pattern provides a way to evaluate language grammar or expression. T
 #### Iterator Pattern
 Iterator pattern is very commonly used design pattern in Java and .Net programming environment. This pattern is used to get a way to access the elements of a collection object in sequential manner without any need to know its underlying representation. Iterator pattern falls under behavioral pattern category.
 [Iterator Pattern](src/iterator)
+
+#### Mediator Pattern
+Mediator pattern is used to reduce communication complexity between multiple objects or classes. This pattern provides a mediator class which normally handles all the communications between different classes and supports easy maintenance of the code by loose coupling. Mediator pattern falls under behavioral pattern category.
+[Mediator Pattern](src/mediator)
