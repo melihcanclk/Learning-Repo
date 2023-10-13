@@ -36,6 +36,8 @@ public class DepartmentController {
         return departmentService.getAllDepartments();
     }
 
+
+
     @GetMapping("/some-config")
     public String getSomeConfigInApplicationProperties() {
         return someConfigInApplicationProperties;
