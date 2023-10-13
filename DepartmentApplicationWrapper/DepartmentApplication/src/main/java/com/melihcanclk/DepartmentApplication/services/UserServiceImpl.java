@@ -8,13 +8,12 @@ import com.melihcanclk.DepartmentApplication.model.UserModel;
 import com.melihcanclk.DepartmentApplication.repositories.PasswordResetTokenRepository;
 import com.melihcanclk.DepartmentApplication.repositories.UserRepository;
 import com.melihcanclk.DepartmentApplication.repositories.VerificationTokenRepository;
-import jakarta.transaction.*;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Calendar;
-import java.util.UUID;
 
 @Service
 public class UserServiceImpl implements UserService {

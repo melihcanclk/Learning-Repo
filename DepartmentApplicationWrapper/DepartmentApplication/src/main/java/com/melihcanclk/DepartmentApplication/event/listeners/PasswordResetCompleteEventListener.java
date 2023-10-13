@@ -1,6 +1,5 @@
 package com.melihcanclk.DepartmentApplication.event.listeners;
 
-import com.melihcanclk.DepartmentApplication.entities.PasswordResetToken;
 import com.melihcanclk.DepartmentApplication.entities.User;
 import com.melihcanclk.DepartmentApplication.event.PasswordResetCompleteEvent;
 import com.melihcanclk.DepartmentApplication.services.UserService;

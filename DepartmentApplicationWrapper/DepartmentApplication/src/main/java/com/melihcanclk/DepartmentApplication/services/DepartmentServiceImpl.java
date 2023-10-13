@@ -6,7 +6,6 @@ import com.melihcanclk.DepartmentApplication.repositories.DepartmentRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Optional;
 
 @Component
 public class DepartmentServiceImpl implements DepartmentService {
