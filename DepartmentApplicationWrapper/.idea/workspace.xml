@@ -4,58 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9562374f-87d7-415e-baa7-c82754607945" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/DepartmentApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/config/FeatureEndpoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/config/WebSecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/controllers/DepartmentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/controllers/RegistrationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/Course.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/CourseMaterial.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/Department.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/ErrorMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/Guardian.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/PasswordResetToken.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/Teacher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/entities/VerificationToken.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/errors/DepartmentNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/errors/RestExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/event/PasswordResetCompleteEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/event/RegistrationCompleteEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/event/listeners/PasswordResetCompleteEventListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/event/listeners/RegistrationCompleteEventListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/model/PasswordModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/model/ResetPasswordInputDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/model/UserModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/repositories/CourseMaterialRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/repositories/CourseRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/repositories/DepartmentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/repositories/PasswordResetTokenRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/repositories/StudentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/repositories/TeacherRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/repositories/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/repositories/VerificationTokenRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/services/DepartmentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/services/DepartmentServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/services/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/java/com/melihcanclk/DepartmentApplication/services/UserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/resources/application-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/resources/application-prod.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/test/java/com/melihcanclk/DepartmentApplication/DepartmentApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/test/java/com/melihcanclk/DepartmentApplication/controllers/DepartmentControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/test/java/com/melihcanclk/DepartmentApplication/repositories/DepartmentRepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DepartmentApplication/src/test/java/com/melihcanclk/DepartmentApplication/services/DepartmentServiceTest.java" beforeDir="false" />
+    <list default="true" id="9562374f-87d7-415e-baa7-c82754607945" name="Changes" comment="feat(Oauth): Unused imports delete">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +60,8 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/melihcan/Desktop/github/Learning-Repo/DesignPatternsInJava&quot;
   }
 }</component>
   <component name="RunAnythingCache">
@@ -230,6 +181,28 @@
       <option name="presentableId" value="Default" />
       <updated>1697206890237</updated>
     </task>
+    <task id="LOCAL-00001" summary="feat(Oauth): OAuth2 implementation and add to submodule, submodule gradle settings done.">
+      <option name="closed" value="true" />
+      <created>1697218107724</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697218107724</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat(Oauth): Unused imports delete">
+      <option name="closed" value="true" />
+      <created>1697218272945</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697218272945</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat(Oauth): OAuth2 implementation and add to submodule, submodule gradle settings done." />
+    <MESSAGE value="feat(Oauth): Unused imports delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(Oauth): Unused imports delete" />
   </component>
 </project>
