@@ -97,3 +97,11 @@ Mediator pattern is used to reduce communication complexity between multiple obj
 #### Memento Pattern
 Memento pattern is used to restore state of an object to a previous state. Memento pattern falls under behavioral pattern category.
 [Memento Pattern](src/memento)
+
+#### Observer Pattern
+Observer pattern is used when there is one-to-many relationship between objects such as if one object is modified, its depenedent objects are to be notified automatically. Observer pattern falls under behavioral pattern category.
+[Observer Pattern](src/observer)
+
+#### State Pattern
+In State pattern a class behavior changes based on its state. This type of design pattern comes under behavior pattern. In State pattern, we create objects which represent various states and a context object whose behavior varies as its state object changes.
+[State Pattern](src/state)
