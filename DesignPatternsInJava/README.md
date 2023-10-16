@@ -109,3 +109,10 @@ In State pattern a class behavior changes based on its state. This type of desig
 #### Null Object Pattern
 In Null Object pattern, a null object replaces check of NULL object instance. Instead of putting if check for a null value, Null Object reflects a do nothing relationship. Such Null object can also be used to provide default behaviour in case data is not available.
 [Null Object Pattern](src/nullObject)
+
+### Behavioral Patterns
+These design patterns are specifically concerned with communication between objects.
+
+#### Strategy Pattern
+In Strategy pattern, a class behavior or its algorithm can be changed at run time. This type of design pattern comes under behavior pattern. In Strategy pattern, we create objects which represent various strategies and a context object whose behavior varies as per its strategy object. The strategy object changes the executing algorithm of the context object.
+[Strategy Pattern](src/strategy)
