@@ -105,3 +105,7 @@ Observer pattern is used when there is one-to-many relationship between objects 
 #### State Pattern
 In State pattern a class behavior changes based on its state. This type of design pattern comes under behavior pattern. In State pattern, we create objects which represent various states and a context object whose behavior varies as its state object changes.
 [State Pattern](src/state)
+
+#### Null Object Pattern
+In Null Object pattern, a null object replaces check of NULL object instance. Instead of putting if check for a null value, Null Object reflects a do nothing relationship. Such Null object can also be used to provide default behaviour in case data is not available.
+[Null Object Pattern](src/nullObject)
