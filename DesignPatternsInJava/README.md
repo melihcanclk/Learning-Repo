@@ -120,3 +120,7 @@ In Strategy pattern, a class behavior or its algorithm can be changed at run tim
 #### Template Pattern
 In Template pattern, an abstract class exposes defined way(s)/template(s) to execute its methods. Its subclasses can override the method implementation as per need but the invocation is to be in the same way as defined by an abstract class. This pattern comes under behavior pattern category.
 [Template Pattern](src/template)
+
+#### Visitor Pattern
+In Visitor pattern, we use a visitor class which changes the executing algorithm of an element class. By this way, execution algorithm of element can vary as and when visitor varies. This pattern comes under behavior pattern category. As per the pattern, element object has to accept the visitor object so that visitor object handles the operation on the element object.
+[Visitor Pattern](src/visitor)
