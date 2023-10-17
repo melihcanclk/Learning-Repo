@@ -116,3 +116,7 @@ These design patterns are specifically concerned with communication between obje
 #### Strategy Pattern
 In Strategy pattern, a class behavior or its algorithm can be changed at run time. This type of design pattern comes under behavior pattern. In Strategy pattern, we create objects which represent various strategies and a context object whose behavior varies as per its strategy object. The strategy object changes the executing algorithm of the context object.
 [Strategy Pattern](src/strategy)
+
+#### Template Pattern
+In Template pattern, an abstract class exposes defined way(s)/template(s) to execute its methods. Its subclasses can override the method implementation as per need but the invocation is to be in the same way as defined by an abstract class. This pattern comes under behavior pattern category.
+[Template Pattern](src/template)
