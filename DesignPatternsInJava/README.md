@@ -128,3 +128,7 @@ In Visitor pattern, we use a visitor class which changes the executing algorithm
 #### MVC Pattern
 MVC Pattern stands for Model-View-Controller Pattern. This pattern is used to separate application's concerns.
 [Model-View-Controller Pattern](src/mvc)
+
+#### Business Delegate Pattern
+Business Delegate Pattern is used to decouple presentation tier and business tier. It is basically use to reduce communication or remote lookup functionality to business tier code in presentation tier code.
+[Business Delegate Pattern](src/businessDelegate)
