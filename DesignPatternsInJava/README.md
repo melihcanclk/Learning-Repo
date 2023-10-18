@@ -124,3 +124,7 @@ In Template pattern, an abstract class exposes defined way(s)/template(s) to exe
 #### Visitor Pattern
 In Visitor pattern, we use a visitor class which changes the executing algorithm of an element class. By this way, execution algorithm of element can vary as and when visitor varies. This pattern comes under behavior pattern category. As per the pattern, element object has to accept the visitor object so that visitor object handles the operation on the element object.
 [Visitor Pattern](src/visitor)
+
+#### MVC Pattern
+MVC Pattern stands for Model-View-Controller Pattern. This pattern is used to separate application's concerns.
+[Model-View-Controller Pattern](src/mvc)
