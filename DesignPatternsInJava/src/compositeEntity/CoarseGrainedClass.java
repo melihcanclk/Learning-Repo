@@ -4,10 +4,6 @@ import java.util.Arrays;
 
 public class CoarseGrainedClass implements ICoarseGrained{
     private final Composite[] composites = {new DependentClass1(), new DependentClass2()};
-    private int getLengthComposites() {
-        return composites.length;
-    }
-
 
     @Override
     public void setData(String... data) {
