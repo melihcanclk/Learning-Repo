@@ -132,3 +132,7 @@ MVC Pattern stands for Model-View-Controller Pattern. This pattern is used to se
 #### Business Delegate Pattern
 Business Delegate Pattern is used to decouple presentation tier and business tier. It is basically use to reduce communication or remote lookup functionality to business tier code in presentation tier code.
 [Business Delegate Pattern](src/businessDelegate)
+
+#### Composite Entity Pattern
+Composite Entity pattern is used in **EJB** persistence mechanism. A Composite entity is an EJB entity bean which represents a graph of objects. When a composite entity is updated, internally dependent objects beans get updated automatically as being managed by EJB entity bean. Following are the participants in Composite Entity Bean.
+[Composite Entity Pattern](src/compositeEntity)
