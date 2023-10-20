@@ -152,3 +152,7 @@ Intercepting Filter Pattern is used to do some pre-processing / post-processing 
 #### Service Locator Pattern
 The service locator design pattern is used when we want to locate various services using JNDI lookup. Considering high cost of looking up JNDI for a service, Service Locator pattern makes use of caching technique. For the first time a service is required, Service Locator looks up in JNDI and caches the service object. Further lookup or same service via Service Locator is done in its cache which improves the performance of application to great extent. Following are the entities of this type of design pattern.
 [Service Locator Pattern](src/serviceLocator)
+
+#### Transfer Object Pattern
+The Transfer Object pattern is used when we want to pass data with multiple attributes in one shot from client to server. 
+[Transfer Object Pattern](src/transferObject)
