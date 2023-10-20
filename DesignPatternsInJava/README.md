@@ -148,3 +148,7 @@ Front Controller pattern is used to provide a centralized request handling mecha
 #### Intercepting Filter Pattern
 Intercepting Filter Pattern is used to do some pre-processing / post-processing with request or response of the application. Filters are defined and applied on the request before passing the request to actual target application. Filters can do the authentication/ authorization/ logging or tracking of request and then pass the requests to corresponding handlers. Following are the entities of this type of design pattern.
 [Intercepting Filter Pattern](src/interceptingFilter)
+
+#### Service Locator Pattern
+The service locator design pattern is used when we want to locate various services using JNDI lookup. Considering high cost of looking up JNDI for a service, Service Locator pattern makes use of caching technique. For the first time a service is required, Service Locator looks up in JNDI and caches the service object. Further lookup or same service via Service Locator is done in its cache which improves the performance of application to great extent. Following are the entities of this type of design pattern.
+[Service Locator Pattern](src/serviceLocator)
