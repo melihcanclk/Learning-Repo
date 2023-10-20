@@ -144,3 +144,7 @@ Data Access Object Pattern or DAO pattern is used to separate low level data acc
 #### Front Controller Pattern
 Front Controller pattern is used to provide a centralized request handling mechanism so that all requests will be handled by a single handler. This handler can do the authentication/ authorization/ logging or tracking of request and then pass the requests to corresponding handlers. Following are the entities of this type of design pattern.
 [Front Controller Pattern](src/frontController)
+
+#### Intercepting Filter Pattern
+Intercepting Filter Pattern is used to do some pre-processing / post-processing with request or response of the application. Filters are defined and applied on the request before passing the request to actual target application. Filters can do the authentication/ authorization/ logging or tracking of request and then pass the requests to corresponding handlers. Following are the entities of this type of design pattern.
+[Intercepting Filter Pattern](src/interceptingFilter)
