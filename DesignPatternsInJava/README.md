@@ -140,3 +140,7 @@ Composite Entity pattern is used in **EJB** persistence mechanism. A Composite e
 #### Data Access Object Pattern
 Data Access Object Pattern or DAO pattern is used to separate low level data accessing API or operations from high level business services. Following are the participants in Data Access Object Pattern.
 [Data Access Object Pattern](src/dao)
+
+#### Front Controller Pattern
+Front Controller pattern is used to provide a centralized request handling mechanism so that all requests will be handled by a single handler. This handler can do the authentication/ authorization/ logging or tracking of request and then pass the requests to corresponding handlers. Following are the entities of this type of design pattern.
+[Front Controller Pattern](src/frontController)
